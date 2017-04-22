@@ -1,0 +1,12 @@
+{
+  "name": "api.system.win.window",
+  "version": "0.0.1",
+  "description": "Module api.system for manage Windows OS window",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Перспективные разработки ЕФС",
+  "license": "Apache-2.0",
+  "private": true
+}
