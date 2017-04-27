@@ -12,19 +12,17 @@ var user32 = new FFI.Library('user32', {
 	]
 });
 
-function WindowSA(name) {
-	console.log('Window system API module loaded');
-
+function WindowSA() {
 	if (!(this instanceof WindowSA)) {
-		return new WindowSA(name);
+		return new WindowSA();
 	}
 
-	this.name = name;
+	console.log('Window system API module loaded');
 }
 
-WindowSA.prototype.sayHello = function sayHello() {
+WindowSA.prototype.sayHello = function sayHello(params) {
 	// диалоговое окно
-	var OK_or_Cancel = user32.MessageBoxW(0, TEXT('Привет, "' + this.name + '"!'), TEXT('Заголовок окна'), 1);
+	var OK_or_Cancel = user32.MessageBoxW(0, TEXT('Привет, "' + params.hello + '"!'), TEXT('Заголовок окна'), 1);
 };
 
 module.exports = WindowSA;
